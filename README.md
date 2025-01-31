@@ -44,16 +44,11 @@ This is a web-based quiz application featuring gamification elements, built usin
 - **Engaging UI**: Designed for a smooth and interactive experience.
 
 ## Screenshots
-(Add screenshots of the app interface here)
 [Quiz summary Screen](assests/summary.png)
 [Quiz question screen](assests/quizquestion.png)
 [welcome page](assests/welcome.png)
 
 
 ## Video Walkthrough
-(Add a link to a video walkthrough demonstrating the app functionality)
 
-## Submission
-- **GitHub Repository**: [Insert Repository Link]
-- **Readme File**: This document serves as the README file for submission.
 
