@@ -22,8 +22,8 @@ This is a web-based quiz application featuring gamification elements, built usin
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd quiz-app
+   git clone https://github.com/Anubhav1244/gamification
+   cd quizapp
    ```
 2. Install dependencies:
    ```bash
