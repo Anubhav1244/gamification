@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQuiz } from './hooks/useQuiz';
+import {useQuiz} from './hooks/useQuiz';
 import { WelcomeScreen } from './components/WelcomeScreen';
 import { QuizCard } from './components/QuizCard';
 import { QuizSummary } from './components/QuizSummary';
@@ -15,7 +15,7 @@ function App() {
     submitAnswer, 
     calculateSummary 
   } = useQuiz();
-
+  console.log("QUESTONS",questions);
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">

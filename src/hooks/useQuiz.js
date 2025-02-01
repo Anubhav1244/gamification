@@ -39,27 +39,37 @@ export const useQuiz = () => {
     timePerQuestion: [],
   });
   const [startTime, setStartTime] = useState(0);
-
+  const apiKey="PHSNcWXtDcQhCOx5bgm6wbPtMA6nAkMEE33RRfym"
   useEffect(() => {
     fetchQuizData();
   }, []);
 
   const fetchQuizData = async () => {
     try {
-      const response = await fetch("https://api.jsonserve.com/Uw5CrX", { mode: "no-cors" })
-      console.log("response",response);
-      if (!response.ok) throw new Error('Failed to fetch quiz data');
+      const response = await fetch(`https://quizapi.io/api/v1/questions?apiKey=${apiKey}&limit=10`);
+      if (!response.ok) throw new Error("Failed to fetch quiz data");
       const data = await response.json();
-      
-      if (Array.isArray(data) && data.length > 0) {
-        setQuestions(data);
-      } else {
-        console.warn('Invalid data format from API, using fallback data');
-        setQuestions(mockQuizData);
-      }
+      const formattedQuestions = data.map((q) => {
+        const options = Object.entries(q.answers)
+          .filter(([key, value]) => value !== null)
+          .map(([key, value]) => value);
+
+        const correctAnswerIndex = Object.entries(q.correct_answers)
+          .filter(([key, value]) => value === "true")
+          .map(([key, value]) => key.replace("_correct", ""))
+          .map((key) => Object.keys(q.answers).indexOf(key))[0];
+
+        return {
+          id: q.id,
+          question: q.question,
+          options,
+          correctAnswer: correctAnswerIndex,
+          points: 10,
+        };
+      });
+      setQuestions(formattedQuestions);
     } catch (err) {
-      console.warn('Error fetching quiz data, using fallback data:', err);
-      setQuestions(mockQuizData);
+      console.log("Error fetching quiz data:", err);
     } finally {
       setLoading(false);
     }
