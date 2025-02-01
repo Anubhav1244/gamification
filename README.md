@@ -57,7 +57,10 @@ if your marks greater than 75% then
 if your marks less than 75% then
 [Quiz summary Screen](assests/summary75.png)
 
+mark your correct option 
 [Quiz question screen](assests/quizquestion.png)
+
+Home page of the quizapp
 [welcome page](assests/welcome.png)
 
 
