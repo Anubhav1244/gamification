@@ -65,6 +65,7 @@ Home page of the quizapp
 
 
 ## Video Walkthrough
-[video](assests/video(1).mp4)
+[video](https://drive.google.com/file/d/1e9-ohio0re-Hkq5a628ICSOlVvmTeBi8/view?usp=sharing)
+
 
 
