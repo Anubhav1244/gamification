@@ -11,8 +11,14 @@ This is a web-based quiz application featuring gamification elements, built usin
 - **Result Summary**: Displays total points scored at the end of the quiz.
 
 ## Data Integration
-- The app fetches quiz data from the API: `https://api.jsonserve.com/Uw5CrX`.
+- The app fetches quiz data from the API: `https://quizapi.io/api/v1/questions?apiKey=${apiKey}&limit=10`.
 - Implements robust error handling for seamless user experience.
+
+## Steps to get your api key
+- visit quizapi website 
+- create your account 
+- click on get API token
+- generate the token 
 
 ## Technical Stack
 - **Frontend Framework**: React.js
@@ -44,7 +50,13 @@ This is a web-based quiz application featuring gamification elements, built usin
 - **Engaging UI**: Designed for a smooth and interactive experience.
 
 ## Screenshots
+
+if your marks greater than 75% then
 [Quiz summary Screen](assests/summary.png)
+
+if your marks less than 75% then
+[Quiz summary Screen](assests/summary75.png)
+
 [Quiz question screen](assests/quizquestion.png)
 [welcome page](assests/welcome.png)
 
